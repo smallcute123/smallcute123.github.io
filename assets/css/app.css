@@ -986,10 +986,10 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
   left: -17px;
 }
 .theme-white .tpl-user-card {
-  border: 1px solid #3598dc;
-  border-top: 2px solid #3598dc;
-  background: #3598dc;
-  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  background: #ffffff;
+  color: #0277bd;
   border-radius: 4px;
 }
 .theme-white .tpl-user-card-title {
@@ -1005,7 +1005,7 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
   margin-bottom: 15px;
 }
 .theme-white .achievement-image {
-  border-radius: 50%;
+  border-radius: 0%;
   margin-bottom: 22px;
 }
 .theme-white .achievement-description {
@@ -1070,7 +1070,7 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
   padding: 10px 20px 13px;
   background-color: #fff;
   border-radius: 4px;
-  color: #838FA1;
+  color: #333;
 }
 .theme-white .widget-title {
   font-size: 16px;
@@ -1651,9 +1651,9 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
   padding: 6px 0;
 }
 .theme-black .tpl-user-card {
-  border: 1px solid #11627d;
-  border-top: 2px solid #105f79;
-  background: #1786aa;
+  border: 1px solid #fbb8c1;
+  border-top: 2px solid #fbb8c1;
+  background: #fbb8c1;
   color: #ffffff;
 }
 .theme-black .tpl-user-card-title {
