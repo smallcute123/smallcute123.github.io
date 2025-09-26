@@ -1,32 +1,241 @@
----
-layout: default
-title : Showcase
-navbar_title: Showcase
-container_class: container-xl
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cats Showcase - Xiaoyu Cheng</title>
 
-{% assign cards_by_group = site.showcase | sort: "date" | reverse | where: "show", true | group_by_exp: "item", "item.group" %}
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap">
+    <link rel="stylesheet" href="/academic-homepage/assets/css/global.css">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top mb-5 shadow-sm">
+        <div class="container-xl">
+            <a class="navbar-brand"><strong>Xiaoyu Cheng</strong></a>
+            <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-map"></i> Menu
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/academic-homepage/">Home</a>
+                    </li>
+                    
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="/academic-homepage/publications">Publications</a>
+                    </li>
+                     -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/academic-homepage/showcase">Showcase</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-{% for group in cards_by_group %}
-<h1>{{ group.name }}</h1>
-<div class="row grid mb-4">
-    <div class="grid-sizer col-1"></div>
-    {% for item in group.items %}
-    {% if item.width >= 6 -%}
-        {%- assign width_sm = 12 -%}
-        {%- assign width_xs = 12 -%}
-    {%- elsif item.width >= 2 -%}
-        {%- assign width_sm = 6 -%}
-        {%- assign width_xs = 6 -%}
-    {%- else -%}
-        {%- assign width_sm = item.width | times: 2 | at_most: 12 -%}
-        {%- assign width_xs = item.width | times: 2 | at_most: 12 -%}
-    {%- endif -%}
-    <div class="p-2 grid-item col-md-{{ item.width | at_most: 12 }} col-sm-{{ width_sm }} col-{{ width_xs }}">
-        <div class="{% if item.class != null %}{{ item.class }}{% else %}card border-0 shadow-sm bg-white{% endif %}">
-            {{ item.content }}
+    <div class="container-xl mt-5 pt-4">
+        <h1 style="font-size: 28px;">My First Experience Presenting my Paper at USENIX Security, Philadelphia</h1>
+        <div class="row grid mb-4">
+            <div class="grid-sizer col-1"></div>
+
+            <!-- Cat 1 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <a href="https://unsplash.com/photos/russian-blue-cat-standing-near-ceramic-vase-with-artificial-flowers-Vv45XEMJWZk" target="_blank">
+                            <img data-src="https://images.unsplash.com/photo-1497473376897-16fbb7552478?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 2 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="/academic-homepage/assets/images/etc/cat2.jpg" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 3 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img src="/academic-homepage/assets/images/etc/cat1.jpg" class="img-fluid rounded-xl" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 4 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="https://images.unsplash.com/photo-1536070800722-f1a29a336bc7?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3" class="lazy w-100 rounded-xl-top" src="/academic-homepage/assets/images/empty_300x200.png" />
+                        <div class="card-body">
+                            <p class="card-text">
+                                Meow! I am a cat. <a href="https://unsplash.com/photos/russian-blue-cat-in-close-up-photography-1pjqSWDcgwo" target="_blank">Unsplash</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 5 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="/academic-homepage/assets/images/photos/portrait.jpg" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    {% endfor %}
-</div>
-{% endfor %}
+
+    <div class="container-xl mt-5 pt-4">
+        <h1 style="font-size: 28px;">Excited to give a talk on InforSec, USTC</h1>
+        <div class="row grid mb-4">
+            <div class="grid-sizer col-1"></div>
+
+            <!-- Cat 1 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <a href="https://unsplash.com/photos/russian-blue-cat-standing-near-ceramic-vase-with-artificial-flowers-Vv45XEMJWZk" target="_blank">
+                            <img data-src="https://images.unsplash.com/photo-1497473376897-16fbb7552478?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 2 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="/academic-homepage/assets/images/etc/cat2.jpg" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 3 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img src="/academic-homepage/assets/images/etc/cat1.jpg" class="img-fluid rounded-xl" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 4 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="https://images.unsplash.com/photo-1536070800722-f1a29a336bc7?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3" class="lazy w-100 rounded-xl-top" src="/academic-homepage/assets/images/empty_300x200.png" />
+                        <div class="card-body">
+                            <p class="card-text">
+                                Meow! I am a cat. <a href="https://unsplash.com/photos/russian-blue-cat-in-close-up-photography-1pjqSWDcgwo" target="_blank">Unsplash</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 5 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="/academic-homepage/assets/images/photos/portrait.jpg" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-xl mt-5 pt-4">
+        <h1 style="font-size: 28px;">My Boyfriend and Girlfriends - Love Them</h1>
+        <div class="row grid mb-4">
+            <div class="grid-sizer col-1"></div>
+
+            <!-- Cat 1 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <a href="https://unsplash.com/photos/russian-blue-cat-standing-near-ceramic-vase-with-artificial-flowers-Vv45XEMJWZk" target="_blank">
+                            <img data-src="https://images.unsplash.com/photo-1497473376897-16fbb7552478?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 2 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="/academic-homepage/assets/images/etc/cat2.jpg" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 3 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img src="/academic-homepage/assets/images/etc/cat1.jpg" class="img-fluid rounded-xl" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 4 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="https://images.unsplash.com/photo-1536070800722-f1a29a336bc7?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3" class="lazy w-100 rounded-xl-top" src="/academic-homepage/assets/images/empty_300x200.png" />
+                        <div class="card-body">
+                            <p class="card-text">
+                                Meow! I am a cat. <a href="https://unsplash.com/photos/russian-blue-cat-in-close-up-photography-1pjqSWDcgwo" target="_blank">Unsplash</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat 5 -->
+            <div class="p-2 grid-item col-md-3 col-sm-6 col-6">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div>
+                        <img data-src="/academic-homepage/assets/images/photos/portrait.jpg" class="lazy w-100 rounded-xl" src="/academic-homepage/assets/images/empty_300x200.png" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-xl">
+            <div class="row my-3">
+                <div class="col-6">
+                    <div class="text-muted">
+                        <i>Last updated: Sep 2025</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
